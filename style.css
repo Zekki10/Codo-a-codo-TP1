@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     font-family: 'Orbitron', sans-serif;
+    scroll-behavior:smooth; /*Con esta regla logro que al moverse entre anclas muestre todo el scroll*/
 }
 body {
     display: flex;
@@ -27,14 +28,25 @@ body {
     height: 100%;
     margin-top: 0.5%;
 }
+/*Logo animado*/
 .logo_container {
     margin: 1% 5%;
     height: 100%;
+    position: absolute;
 }
+
 .logo {
+    display: none;
     height: 90%;
     opacity: .8;
+    animation: parpadeo 2s infinite linear;
 }
+@keyframes parpadeo {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+   100% { opacity: 1.0; }
+  }
+
 .listnav_container {
     width: 100%;
     height: 100%; 
@@ -43,22 +55,38 @@ body {
     display: flex;
     list-style:none;
     justify-content: space-around;
-    margin-top: 10px;
+    padding-top: 10px;
 }
 li {
     padding: 1% 5%;
     font-weight: 700;
-
 }
 li:hover {
-    clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
-    border: 1px solid #FFFFF5DD ;
+    /*clip-path:padding-box polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);*/
+    cursor: pointer;
+    transform: scale(1.1);
+    transition-duration: 200ms;    
+    animation: neon 800ms infinite linear;
+    border-radius: 2px;
 }
+@keyframes neon {
+    0% {
+        border: 1px solid #FFFFF5DD ;
+        box-shadow: 0 0 5px #ec6036, inset 0 0 5px #f67b55;
+    }
+    50% {
+        border: 1px solid #FFFFF5DD ;
+        box-shadow: 0 0 15px #eb400b, inset 0 0 15px #e95f35;
+    }
+    100% { 
+        border: 1px solid #FFFFF5DD ;
+        box-shadow: 0 0 5px #ec6036, inset 0 0 5px #f67b55;    }
+    }
 
-a {
-    color: antiquewhite;
+a.anav {
+    color: #faebd7;
 }
-a:link, a:visited, a:active {
+a:link, .a:visited, a:active {
     text-decoration:none;
 }
 
@@ -67,24 +95,91 @@ a:link, a:visited, a:active {
     display: flex;
     overflow-x: hidden;
 }
+.gif_container {
+    width: 90%;
+    border: solid #faebd7;
+}
+.gif {
+    position: absolute;
+    width: 60%;
+    top: 5%;
+    left: 18%;
+}
 #video {
     position: sticky;
     z-index: -10;  
     min-width:100% ;
-    top: 50%; /* ubica el comienzo del bloque al 50% del total del alto de su contenedor contando desde la parte superior*/
-    left: 50%; /*ubica el comienzo del bloque al 50% del total del ancho de su contenedor contando desde la parte izquierda*/
-    /*transform: translateX(50%) translateY(50%);*/
-    /*traslada en el eje x e Y un50%*/
+    top: 50%; 
+    left: 50%; 
 }
 #video_responsive {
     display: none;
 }
 
-/*Separador, aca va una pequeña info probablemente*/
+/*Sobre mi - separador*/
+
 .separador_container{
-    height: 30vh;
+    height: 100%;
     background-color: black;
 }
+.description {
+    color: #FFFFFF;
+    padding: 5%;
+    text-align: justify;
+}
+strong {
+    color: #eb400b
+}
+.icon_container {
+    display: flex;
+    margin: 3%;
+    padding: 5%;
+    justify-content: center;
+}
+.fa-brands{
+    color: #FFFFFF;
+    font-size: 80px;
+}
+.a_icon {
+    padding: 0px 5%;
+}
+.a_icon:hover {
+    transform: scale(1.3);
+    transition: 500ms;
+}
+.fa-linkedin {
+    color: #0e76a8 ;
+}
+.fa-git-square {
+    color:#F1502F
+}
+.fa-instagram-square {
+    /*Este estilo de instagram lo saqué de internet, no es propio*/
+
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+          /* Also define standard property for compatibility */
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+
+.fa-youtube {
+    color: #c4302b;
+}
+/*Carrousel con portfolio de imagenes*/
+.portfolio {
+    ba
+}
+
+/*iframe*/
+
+.dino_iframe {
+    display: none;
+    width: 100%; 
+    height: 100%; 
+    background-color: #000000;
+}
+/*Responsive*/
 @media (max-width:600px) {
     #video {
         display: none;
@@ -97,8 +192,38 @@ a:link, a:visited, a:active {
     top: 50%; 
     left: 50%;
     }
+    .nav_container {
+        justify-content: center;
+    }
+    .listnav_container{
+        width: 85%;
+        margin: 0;
+        padding: 0;
+    }
     li {
-        padding: 3% 5%;
+        padding: 1% 3%;
+        margin: 0px 1.5%;
+        font-size: .8rem;
         font-weight: 600;
+    }
+    .li:hover {
+        transform: scale(1);
+    }
+    .logo_container {
+        display: none;
+    }
+    .nav_container {
+        margin: 0px;
+    }
+    .gif {
+        width: 90%;
+        left: 5%;
+    }
+    /*Sobre mi - separador*/
+    .icon_container {
+        margin: 15%;
+    }
+    .description {
+        text-align: justify;
     }
 }

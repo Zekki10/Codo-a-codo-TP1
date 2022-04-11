@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+    <head>
+        <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <link rel="stylesheet" href="style.css">
@@ -9,47 +9,62 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/dec46bdae0.js" crossorigin="anonymous"></script>
     <title>TP Codo a codo 4.0 - Vera Ezequiel</title>
 </head>
 <body>
-    <div class="container">
+    <div id="Inicio" class="container">
         <nav class="nav_fixed">
             <!--Barra de Navegacion-->
             <div class="nav_container">
                 <div class="logo_container">
-                    <img class="logo" src="Recursos/logo.png">
+                    <img class="logo" src="Recursos/logo-zek.png">
                 </div>
                 <div class="listnav_container">
                     <ul class="listnav">
-                        <li><a href="Index.html#Inicio">&lt;/Inicio&gt;</a></li>
-                        <li><a href="Index.html#Sobre_mi">&lt;/Sobre mi&gt;</a></li>
-                        <li><a href="Index.html#Redes">&lt;/Mis Redes&gt;</a></li>
-                        <!--<li><a href="">&lt;/Discord&gt;</a></li>-->
+                        <li><a class="anav" href="Index.html#Inicio">&lt;/Inicio&gt;</a></li>
+                        <li><a class="anav" href="Index.html#Redes">&lt;/Portfolio&gt;</a></li>
+                        <li><a class="anav" href="Index.html#Sobre_mi">&lt;/Sobre mi&gt;</a></li>
+                        <li><a class="anav" href="">&lt;/Contacto&gt;</a></li>
                     </ul>
                 </div>
             </div>        
         </nav>
         <header class="portada_container" name="Inicio">
         <!--Portada con video de fondo-->
-            <video id="video" src="Recursos/video-background.mp4" autoplay loop muted poster="Recursos/portada.jpg"></video>
+            <img class="gif" src="Recursos/textoanimado.gif">
+            <video id="video" src="Recursos/video-background2.mp4" autoplay loop muted poster="Recursos/portada.jpg"></video>
             <video id="video_responsive" src="Recursos/video-background-responsive.mp4" autoplay loop muted poster="Recursos/portada.jpg"></video>
             <div class="divisor"></div>
         </div>
         <!--separador logo breve descripcion-->
-        <div class="separador_container">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate nulla mollitia, velit eum quas magnam, fuga, deleniti repellendus dolores hic assumenda dignissimos illo dicta libero! Assumenda distinctio ducimus tempore perferendis.</p>
-        </div>   
-        </header>
-        <main name="Sobre_mi">
-            <!--Carrousel con trabajos / portfolio-->
-            <div class="portfolio_container">                
+    </header>
+    <main >
+        <div id="Sobre_mi" class="separador_container">
+            <p class="description">
+                Estudiante autodidacta de programación y desarrollo web.<br> Actualmente me encuentro realizando el curso Full Stack Python del programa <strong>Codo a codo 4.0</strong> del gobierno de la ciudad y esta web es una demostración de las herramientas aprendidas en este curso <br><br>
+                Pueden obtener más información mia en las siguientes redes (ficticias) de aquí debajo
+            </p>
+            <div class="icon_container">
+                <a class="a_icon" href=""><i class="fa-brands fa-linkedin"></i></a>
+                <a class="a_icon" href=""><i class="fa-brands fa-git-square"></i></a>
+                <a class="a_icon" href=""><i class="fa-brands fa-instagram-square"></i></a>
+                <a class="a_icon" href=""><i class="fa-brands fa-youtube"></i></a>
             </div>
-            <!--Links a redes con animacion-->
-        <section name="Redes">
-            <div class="redes__container">                
+        </div>   
+        <!--Carrousel con trabajos / portfolio-->
+        <section class="portfolio">
+            <div class="portfolio_container">
+
             </div>
         </section>
-        </main>
+            <!--Links a redes con animacion-->
+            <section name="contacto_espera">
+                <div class="espera__container">                
+                    <iframe class="dino_iframe" src="https://wayou.github.io/t-rex-runner/" scrolling="no" ></iframe>   
+                </div>
+            </section>
+    </main>
             <!--footer-->
         <footer>
             <div class="footer__container">
