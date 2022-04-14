@@ -7,11 +7,11 @@
 body {
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
+    background-color: #000000;
 }
 /*Barra de Navegacion*/
 .container {
-    width: 100vw;
+    width: 100%;
     padding: 0px;
     margin: 0px;
 }
@@ -23,29 +23,13 @@ body {
 }
 
 .nav_container {
+    
     display: flex;
     align-items: center;
     height: 100%;
     margin-top: 0.5%;
 }
 /*Logo animado*/
-.logo_container {
-    margin: 1% 5%;
-    height: 100%;
-    position: absolute;
-}
-
-.logo {
-    display: none;
-    height: 90%;
-    opacity: .8;
-    animation: parpadeo 2s infinite linear;
-}
-@keyframes parpadeo {
-    0% { opacity: 1.0; }
-    50% { opacity: 0.0; }
-   100% { opacity: 1.0; }
-  }
 
 .listnav_container {
     width: 100%;
@@ -57,11 +41,11 @@ body {
     justify-content: space-around;
     padding-top: 10px;
 }
-li {
+.li_nav {
     padding: 1% 5%;
     font-weight: 700;
 }
-li:hover {
+.li_nav:hover {
     /*clip-path:padding-box polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);*/
     cursor: pointer;
     transform: scale(1.1);
@@ -82,15 +66,20 @@ li:hover {
         border: 1px solid #FFFFF5DD ;
         box-shadow: 0 0 5px #ec6036, inset 0 0 5px #f67b55;    }
     }
-
-a.anav {
-    color: #faebd7;
-}
-a:link, .a:visited, a:active {
-    text-decoration:none;
-}
-
-/* Portada y Fondo animado */
+    
+    a.anav {
+        color: #faebd7;
+        width: 100%;
+        user-select: none;
+    }
+    a:link, .a:visited, a:active {
+        text-decoration:none;
+    }
+    
+    /* Portada y Fondo animado */
+main {
+        overflow-x: hidden;  
+    }
 .portada_container {
     display: flex;
     overflow-x: hidden;
@@ -117,14 +106,16 @@ a:link, .a:visited, a:active {
 }
 
 /*Sobre mi - separador*/
-
+main {
+    background-color: #000000;
+}
 .separador_container{
     height: 100%;
     background-color: black;
 }
-.description {
+p {
     color: #FFFFFF;
-    padding: 5%;
+    padding: 10% 5% 0%;
     text-align: justify;
 }
 strong {
@@ -142,10 +133,10 @@ strong {
 }
 .a_icon {
     padding: 0px 5%;
+    transition: transform 500ms;
 }
 .a_icon:hover {
-    transform: scale(1.3);
-    transition: 500ms;
+    transform: scale(1.3);  
 }
 .fa-linkedin {
     color: #0e76a8 ;
@@ -166,18 +157,153 @@ strong {
 .fa-youtube {
     color: #c4302b;
 }
+/*Separador animado*/
+.portada_portfolio_container{
+    display: flex;
+    justify-content: center;
+}
+.video_carrousel_container {
+    display: flex;
+    justify-content: center;
+}
+#video-carrousel {
+    width: 70%;
+}
+.portfolio_titulo{
+    color: #FFFFFF;
+    position: absolute;    
+    z-index: 1000000;
+    margin-top: 7%;
+    font-weight: 300;
+    text-shadow: 0 0 10px #000000;  
+}
+
 /*Carrousel con portfolio de imagenes*/
-.portfolio {
-    ba
+
+.portfolio_container{
+    background-color: #000000;
+    position: relative;
+    justify-content: center;
+    margin:0% 0% 5% ;
+    padding: 8% 0% 5%;
+}
+
+
+.carrousel_container{
+    width: 300%;
+    display: flex;
+    flex-flow: row nowrap; /*la propiedad nowrap obliga a que los elementos se queden en una sola linea y fuerza a que se desborde el contenedor en este caso*/
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+}
+.img_container{
+    width: calc(100% / 3); /*Esto permite dividir el ancho entre las tres imagenes en partes iguales*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_carrousel {
+    max-width: 400px;
+    border-radius: 10px;
+    /*box-shadow: 0 0 15px #eb400b, inset 0 0 15px #e95f35;  */
+    box-shadow: 0 0 35px #2d0beb, inset 0 0 15px #3553e9;
+}
+.selectores_carrousel {
+    width: 100%;
+    margin-top: 1.5% ;
+    list-style:none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.selector_carrousel {
+    color: #faebd7;
+    cursor: pointer;
+    font-size: 10px;
+    margin: 1% 5%;
+    opacity: .8;
+
+    /*Este filtro permite dar sombreado a imagenes con transparencia*/
+    /*filter: drop-shadow(0 2px 5px #9f9aff); */
+}
+.selector_carrousel:hover {
+    transform: rotate(90deg);
+    transition-duration: 500ms;
+}
+.activo {
+    color: #2d0beb;
+    font-size: 25px;
+}
+/*Separador y Boton de contacto*/
+.formulario_container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 5%;
+    justify-content: center;
+    align-items: center;
+}
+.button {
+    cursor: pointer;
+    color: #FFFFFF;
+    font-size: 35px;
+    background-color:#000000 ;
+    padding: 1% 3%;
+    margin: 10% 0;  
+    animation: neon 800ms infinite linear;
+    border-radius: 2px;
+    transition: transform 500ms;
+}
+.button:hover {
+    transform:scale(1.2);
+}
+
+#video-mensaje {
+    width: 70%;
 }
 
 /*iframe*/
-
-.dino_iframe {
-    display: none;
-    width: 100%; 
-    height: 100%; 
+.espera_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h2 {
+    color: #FFFFFF;
+    text-align: center;
+}
+.dino_description {
+    padding: 5%;
+}
+.dino__container {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin: 2% 0;
+    min-height: 300px;
+}
+.dino_iframe {  
+    width: 80vw;  
     background-color: #000000;
+    border-radius: 35px;
+    box-shadow: 0 0 35px #fffff569;
+}
+
+/*Footer*/
+footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    border-top: solid 2px #FFFFFF;
+    font-size: small;
+    width: 100%;
+}
+h4 {
+    color: #FFFFFF;
+    margin: 10% 0;
 }
 /*Responsive*/
 @media (max-width:600px) {
@@ -196,7 +322,6 @@ strong {
         justify-content: center;
     }
     .listnav_container{
-        width: 85%;
         margin: 0;
         padding: 0;
     }
@@ -206,12 +331,7 @@ strong {
         font-size: .8rem;
         font-weight: 600;
     }
-    .li:hover {
-        transform: scale(1);
-    }
-    .logo_container {
-        display: none;
-    }
+   
     .nav_container {
         margin: 0px;
     }
@@ -226,4 +346,17 @@ strong {
     .description {
         text-align: justify;
     }
+    /*Portada carrousel*/
+    #video-carrousel {
+        width: 100vw;
+    }
+    /*Carrousel*/
+    .img_container {
+        width: 100vw;
+    }
+    .img_carrousel {
+        max-width: 60%;    
+    }
+
+
 }
