@@ -3,6 +3,7 @@
     padding: 0px;
     font-family: 'Orbitron', sans-serif;
     scroll-behavior:smooth; /*Con esta regla logro que al moverse entre anclas muestre todo el scroll*/
+    font-size: 24px;
 }
 body {
     display: flex;
@@ -15,7 +16,14 @@ body {
     padding: 0px;
     margin: 0px;
 }
-.nav_fixed {
+#btn-menu--open {
+    display: none;
+}
+#btn-menu {
+    display: none;
+}
+#nav {
+    
     position: fixed;
     width: 100%;
     height: 60px;
@@ -23,7 +31,6 @@ body {
 }
 
 .nav_container {
-    
     display: flex;
     align-items: center;
     height: 100%;
@@ -141,8 +148,8 @@ strong {
 .fa-linkedin {
     color: #0e76a8 ;
 }
-.fa-git-square {
-    color:#F1502F
+.fa-github {
+    color:#d7d7d7;
 }
 .fa-instagram-square {
     /*Este estilo de instagram lo saqué de internet, no es propio*/
@@ -172,7 +179,7 @@ strong {
 .portfolio_titulo{
     color: #FFFFFF;
     position: absolute;    
-    z-index: 1000000;
+    z-index: 999;
     margin-top: 7%;
     font-weight: 300;
     text-shadow: 0 0 10px #000000;  
@@ -305,8 +312,19 @@ h4 {
     color: #FFFFFF;
     margin: 10% 0;
 }
-/*Responsive*/
-@media (max-width:600px) {
+
+/***********************************************/
+/******************RESPONSIVE******************/
+/*********************************************/
+
+@media(max-width:960px) {
+    * {
+        font-size: 18px;
+    }
+}
+
+@media (max-width:720px) {
+    
     #video {
         display: none;
     }
@@ -318,23 +336,101 @@ h4 {
     top: 50%; 
     left: 50%;
     }
-    .nav_container {
+    /*Insertar menu hamburguesa*/
+    
+    /*Boton open menu*/
+    #btn-menu--open {
+        display: flex;
+    }
+    .fa-bars {
+        display: block;
+        position: fixed;
+        top: 2%;
+        right: 5%;
+
+        width: 50px;
+		height: 50px;
+        z-index: 10000000;
+		justify-content: center;
+		align-items: center ;
+		font-size: 24px;
+		background: #14182b;
+		border-radius: 50px;
+		color: #d7d7d7;
+		cursor: pointer;
+		transition: all 300ms;
+    }
+    .fa-bars:hover {
+        background-color: #262f56;
+    }
+    /*Boton Close menu y fondo degrade*/  
+    #btn-menu {
+        display: flex;
+        position: fixed;
+        top: 2%;
+        right: 5%;
+
         justify-content: center;
+        align-items: center ;
+        
+        font-size: 24px;
+        width: 50px;
+        height: 50px;
+        background: #14182b;
+        border-radius: 50px;
+        color: #d7d7d7;
+        cursor: pointer;
+        transition: all 300ms;
     }
-    .listnav_container{
-        margin: 0;
-        padding: 0;
+    #btn-menu:hover {
+        background-color: #262f56;
     }
-    li {
-        padding: 1% 3%;
-        margin: 0px 1.5%;
-        font-size: .8rem;
-        font-weight: 600;
+    /*Fondo degrade y vuelta al hacer click*/
+    #back_menu {
+        display: none;
     }
-   
+    .back_menu {
+        position: fixed;
+        background-color: #000000;
+        width: 100vw;
+        height: 100vh;
+        z-index: 1000;
+        opacity: .7;
+        right: 0;
+    }
+
+    /*Estilos de la barra lateral*/
+    .nav_fixed {
+        display: none;
+    }
     .nav_container {
-        margin: 0px;
+        display: flex;
+        position: absolute;
+        background-color: #000000;
+        width: 40vw;
+        height: 100vh;
+        right: 0px;
+        z-index: 100000;
     }
+    .listnav_container {
+        justify-content: center;
+        align-items: center;
+        box-shadow: -10px 0 36px #000000;
+    }
+    .listnav {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 5%;
+        top: 15vh;
+        width: 80%;
+        justify-content: center;
+        
+    }
+    .li_nav {
+        margin: 10% ;
+    }
+    
     .gif {
         width: 90%;
         left: 5%;
@@ -357,6 +453,12 @@ h4 {
     .img_carrousel {
         max-width: 60%;    
     }
-
-
+}
+@media (max-width:540px) {
+    * {    
+    font-size:14px ;
+    }
+    .li_nav {
+        margin-bottom: 15%;
+    }     
 }

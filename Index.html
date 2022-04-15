@@ -14,17 +14,20 @@
     <title>TP Codo a codo 4.0 - Vera Ezequiel</title>
 </head>
 <body>
+    <div id="back_menu" class="back_menu"></div>
     <!--Portada y barra de navegacion-->
     <header id="Inicio" class="container">
-        <nav class="nav_fixed">
+            <i id="btn-menu--open" class="fa-solid fa-bars"></i>
+            <nav id="nav" class="nav_fixed">
             <!--Barra de Navegacion-->
             <div class="nav_container">
+                <i id="btn-menu" class="fa-solid fa-xmark"></i>
                 <div class="listnav_container">
                     <ul class="listnav">
-                        <li class="li_nav"><a class="anav" href="Index.html#Inicio">&lt;/Inicio&gt;</a></li>
-                        <li class="li_nav"><a class="anav" href="Index.html#Portfolio">&lt;/Portfolio&gt;</a></li>
-                        <li class="li_nav"><a class="anav" href="Index.html#Sobre_mi">&lt;/Sobre mi&gt;</a></li>
-                        <li class="li_nav"><a class="anav" href="Index.html#Contacto">&lt;/Contacto&gt;</a></li>
+                        <li id="Inicio_menu" class="li_nav"><a class="anav" href="Index.html#Inicio">&lt;/Inicio&gt;</a></li>
+                        <li id="Portfolio_menu" class="li_nav"><a class="anav" href="Index.html#Portfolio">&lt;/Portfolio&gt;</a></li>
+                        <li id="Sobre_mi_menu" class="li_nav"><a class="anav" href="Index.html#Sobre_mi">&lt;/Sobre mi&gt;</a></li>
+                        <li id="Contacto_menu" class="li_nav"><a class="anav" href="Index.html#Contacto">&lt;/Contacto&gt;</a></li>
                     </ul>
                 </div>
             </div>        
@@ -32,7 +35,7 @@
         <!--Portada con video de fondo-->
         <div class="portada_container" name="Inicio">
             <img class="gif" src="Recursos/textoanimado.gif">
-            <video id="video" src="Recursos/video-background2.mp4" autoplay loop muted poster="Recursos/portada.jpg"></video>
+            <video id="video" src="Recursos/video-background.mp4" autoplay loop muted poster="Recursos/portada.jpg"></video>
             <video id="video_responsive" src="Recursos/video-background-responsive2.mp4" autoplay loop muted poster="Recursos/video-background-responsive-portada.jpg"></video>
             <div class="divisor"></div>
         </div>
@@ -47,7 +50,7 @@
             </p>
             <div class="icon_container">
                 <a class="a_icon" href=""><i class="fa-brands fa-linkedin"></i></a>
-                <a class="a_icon" href=""><i class="fa-brands fa-git-square"></i></a>
+                <a class="a_icon" href=""><i class="fa-brands fa-github"></i></a>
                 <a class="a_icon" href=""><i class="fa-brands fa-instagram-square"></i></a>
                 <a class="a_icon" href=""><i class="fa-brands fa-youtube"></i></a>
             </div>
@@ -96,5 +99,8 @@
         </footer>
      
 </body>
+<!--Cargo libreria Jquery y los scripts propios-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="script-carrousel.js"></script>
+<script src="script-btn.js"></script>
 </html>
