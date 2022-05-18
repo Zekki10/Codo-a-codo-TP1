@@ -11,6 +11,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/dec46bdae0.js" crossorigin="anonymous"></script>
     
+
+    <!--Esto es para el desarrollo, que no tome el cache luego debo borrarlo-->
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+
+
     <title>TP Codo a codo 4.0 - Vera Ezequiel</title>
 </head>
 <body>
@@ -42,26 +50,27 @@
     </header>
     <!--Seeccio "sobre mi" y "Portfolio"-->
     <main >
-        <!--separador - descripcion - links a redes-->
+        <!--separador - descripcion -->
         <div id="Sobre_mi" class="separador_container">
-            <p class="description">
-                Estudiante autodidacta de programación y desarrollo web.<br> Actualmente me encuentro realizando el curso Full Stack Python del programa <strong>Codo a codo 4.0</strong> del gobierno de la ciudad y esta web es una demostración de las herramientas aprendidas en este curso. <br><br>
-                Pueden obtener más información mia en las siguientes redes (ficticias) de aquí debajo
-            </p>
-            <div class="icon_container">
-                <a class="a_icon" href=""><i class="fa-brands fa-linkedin"></i></a>
-                <a class="a_icon" href=""><i class="fa-brands fa-github"></i></a>
-                <a class="a_icon" href=""><i class="fa-brands fa-instagram-square"></i></a>
-                <a class="a_icon" href=""><i class="fa-brands fa-youtube"></i></a>
+            <div class="description_div">
+                <br><br><br>
             </div>
+                <p class="description">
+                    Estudiante de programación y desarrollo web.<br> Actualmente me encuentro realizando el curso Full Stack Python del programa <strong>Codo a codo 4.0</strong> del gobierno de la ciudad. Esta web es una demostración de las herramientas aprendidas en este curso y no pretende ser un portfolio web real. <br><br>
+                </p>
         </div> 
         <!--Division con el resto de contenido-->
+        <section id="Portfolio" class="portfolio_container">
+        <div class="gif_portfolio_container">
+            <img class="gif_portfolio" src="Recursos/portfoliogif.gif">
+        </div>
         <div class="video_carrousel_container">  
-            <h1 class="portfolio_titulo">&lt;/Portfolio&gt;</h1>
             <video id="video-carrousel" src="Recursos/background-carrousel.mp4" autoplay loop muted poster="Recursos/background-carrousel-portada.jpg" ></video>
         </div>
         <!--Carrousel con trabajos / portfolio-->
-        <section id="Portfolio" class="portfolio_container">
+            <p class="portfolio_descripcion">Este portfolio muestra algunos de mis trabajos que fueron realizados como proyectos de estudio anteriores a <strong>Codo a codo 4.0</strong>.<br>
+            La mayoria de estos tienen errores logicos de ser previos a algun tipo de estudio tutorizado y espero poder corregirlos luego con todo lo aprendido en esta etapa. <br><br>
+            </p>
             <div class="carrousel_container">
                 <div class="img_container"><img class="img_carrousel" src="Recursos/Carrousel/img-carrousel1.png"></div>
                 <div class="img_container"><img class="img_carrousel" src="Recursos/Carrousel/img-carrousel2.png"></div>
@@ -72,21 +81,39 @@
                 <li class="selector_carrousel"><i class="fa-solid fa-diamond"></i></li>
                 <li class="selector_carrousel"><i class="fa-solid fa-diamond"></i></li>
             </ul>
-            <p class="portfolio_descripcion">Este portfolio muestra algunos de mis trabajos que fueron realizados como proyectos de estudio anteriores a <strong>Codo a codo 4.0</strong>.<br>
-            La mayoria de estos tienen errores logicos de ser previos a algun tipo de estudio tutorizado y espero poder corregirlos luego con todo lo aprendido en esta etapa. <br><br>
-            </p>
         </section>
     </main>
     <!--Boton de contacto-->
     <section id="Contacto" class="formulario_container">
-        <p>Sin embargo, si los encuentran de interes y por algun motivo, laboral o personal deciden comunicarse conmigo <i>"Guiño guiño"</i>, pueden realizarlo mediante el formulario de contacto en el link de aqui debajo:</p>
-        <a class="button">&lt;/Contacto&gt;</a>
-        <video id="video-mensaje" src="Recursos/background-mensaje.mp4" autoplay loop muted poster="Recursos/background-mensaje-portada.jpg"></video>
+        <div class="gif_container">
+        <img class="gif_contacto" src="Recursos/contactosec.gif">
+        </div>
+        <div class="video_mensaje_container">  
+            <video id="video-mensaje2" src="Recursos/background-contacto.mp4" autoplay loop muted poster="Recursos/background-contacto-portada.jpg" ></video>
+        </div>
+        <p class="contacto_description">Sin embargo, si los encuentran de interes y por algun motivo, laboral o personal deciden comunicarse conmigo <i>"Guiño guiño"</i>, pueden realizarlo mediante el formulario de contacto en el link de aqui debajo:</p>
+        <div class="button_container">
+            <i class="button_ico fa-solid fa-sort-down"></i>
+            <a class="button" href="Formulario.html" target="_blank">&lt;/Contacto&gt;</a>
+        </div>  
+        <p class="contacto_description">Pueden obtener más información mia en las siguientes redes de aquí debajo:</p>
+        <div class="icon_container">
+            <a class="a_icon" href="https://www.linkedin.com/in/ezequielvera391/" target="_blank"href=""><i class="fa-brands fa-linkedin"></i></a>
+            <a class="a_icon" href="" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a class="a_icon" href="" target="_blank"><i class="fa-brands fa-instagram-square"></i></a>
+            <a class="a_icon" href="" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        </div>
     </section>  
     <!--iframe - Dinojuego-->
     <section class="espera_container" id="contacto_espera">
-        <h2>¿Demoro mucho en responder?</h2>
-        <p class="dino_description">Diviertete jugando al famoso juego del <strong>Chromesaurus Rex</strong> hasta que pueda responder tu consulta!</p>
+        <div class="video_dinojuego_container">
+        <video id="video-dinojuego" src="Recursos/background-dinojuego.mp4" autoplay loop muted poster="Recursos/background-dinojuego-portada.jpg"></video>
+        </div>
+        <div class="dino_description_container">
+            <h2>¿Demoro mucho en responder?</h2>
+            <p class="dino_description">Diviertete jugando al famoso juego del <strong>Chromesaurus Rex</strong> hasta que pueda responder tu consulta!</p>
+            <p class="dino_game_description">Haz click en el juego y presiona 'Saltar' (Espacio) para comenzar.</p>      
+        </div>
         <div class="dino__container">                
            <iframe class="dino_iframe" src="https://wayou.github.io/t-rex-runner/" scrolling="no"  frameborder="0"></iframe>
         </div>

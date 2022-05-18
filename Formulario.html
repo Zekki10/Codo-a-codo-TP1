@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!--Fuentes de Google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/dec46bdae0.js" crossorigin="anonymous"></script>
+    <title>Contacto - Formulario de contacto</title>
+</head>
+<body>
+    <!--Formulario de contacto-->
+    <form id="formularioContacto" action="" target="">
+        <fieldset>
+            <legend>&lt;/Formulario de contacto&gt;</legend>
+            <label>Nombre: </label>
+            <div class="form_cont name_cont">
+                <input id="input_name" class="form_input" type="text" id="name" name="name">
+            </div>
+            <!--mensaje de error-->
+            <p id="name_error"class="name_error">El nombre solo puede contener letras y espacios</p>
+
+            <label>Dirección de mail: </label>
+            <div class="form_cont name_cont">
+                <input id="input_mail" class="form_input"  type="text" name="mail">
+            </div> 
+            <p id="mail_error" class="mail_error">Ingrese una direccion de mail valida</p>
+
+
+            <label>Número de telefono: </label>
+            <div class="form_cont name_cont">
+                <input id="input_numero" class="form_input"  type="text" name="numero">
+            </div>
+            <p id="numero_error" class="numero_error">Debe poseer al menos 7 digitos sin caracteres especiales ni letras</p>
+
+            <label>Asunto: </label>
+            <div class="form_cont name_cont">
+            <input id="input_asunto" class="form_input"  type="text"  name="asunto">
+            </div>
+            <p id="asunto_error" class="asunto_error">El campo "Mensaje" no puede estar vacio</p>
+
+            <label>Mensaje: </label>
+            <textarea id="input_mensaje" class="form_input form_textarea"  name="mensaje"></textarea>
+            <p id="mensaje_error" class="asunto_error">El campo no puede estar vacio</p>
+        </fieldset>
+        <div class="button_container">
+            <i class="button_ico form_ico fa-solid fa-sort-down"></i>
+            <input class="button input_button" type="submit" value="&lt;/Enviar&gt;">
+        </div>  
+        <div id="formulario__mensaje--succes" class="formulario__mensaje--succes">
+            <p class="texto_ok">Se envío en formulario correctamente</p>
+        </div>
+    </form>
+    <!--footer-->
+    <footer>
+        <div class="footer__container">
+            <h4 class="footer_p">Ezequiel Vera - TP Codo a codo</h4>
+        </div>
+    </footer>
+</body>
+<script src="/script-formulario.js"></script>
+</html>

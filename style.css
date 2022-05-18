@@ -23,7 +23,6 @@ body {
     display: none;
 }
 #nav {
-    
     position: fixed;
     width: 100%;
     height: 60px;
@@ -49,16 +48,19 @@ body {
     padding-top: 10px;
 }
 .li_nav {
+    width: 100%;
     padding: 1% 5%;
     font-weight: 700;
+    opacity: .85;
 }
 .li_nav:hover {
     /*clip-path:padding-box polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);*/
     cursor: pointer;
     transform: scale(1.1);
     transition-duration: 200ms;    
-    animation: neon 800ms infinite linear;
-    border-radius: 2px;
+    /*animation: neon 800ms infinite linear;
+    border-radius: 2px;*/
+    opacity: 1;
 }
 @keyframes neon {
     0% {
@@ -91,10 +93,7 @@ main {
     display: flex;
     overflow-x: hidden;
 }
-.gif_container {
-    width: 90%;
-    border: solid #faebd7;
-}
+
 .gif {
     position: absolute;
     width: 60%;
@@ -116,13 +115,16 @@ main {
 main {
     background-color: #000000;
 }
+#Sobre_mi{
+    position: relative;
+    padding-top: 2%; 
+}
 .separador_container{
-    height: 100%;
     background-color: black;
 }
 p {
     color: #FFFFFF;
-    padding: 10% 5% 0%;
+    padding: 1% 5% 0%;
     text-align: justify;
 }
 strong {
@@ -131,11 +133,11 @@ strong {
 .icon_container {
     display: flex;
     margin: 3%;
-    padding: 5%;
+    padding: 1%;
     justify-content: center;
 }
 .fa-brands{
-    color: #FFFFFF;
+    color: #d7d7d7;
     font-size: 80px;
 }
 .a_icon {
@@ -146,23 +148,26 @@ strong {
     transform: scale(1.3);  
 }
 .fa-linkedin {
-    color: #0e76a8 ;
+    color: #d7d7d7 ;
 }
 .fa-github {
     color:#d7d7d7;
 }
 .fa-instagram-square {
-    /*Este estilo de instagram lo saqué de internet, no es propio*/
+
+    color: #d7d7d7;
+
+    /*Este estilo de instagram lo saqué de internet, no es propio
 
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
     -webkit-background-clip: text;
-          /* Also define standard property for compatibility */
+          /* Also define standard property for compatibility 
     background-clip: text;
-    -webkit-text-fill-color: transparent; 
+    -webkit-text-fill-color: transparent; */
 }
 
 .fa-youtube {
-    color: #c4302b;
+    color: #d7d7d7;
 }
 /*Separador animado*/
 .portada_portfolio_container{
@@ -174,7 +179,7 @@ strong {
     justify-content: center;
 }
 #video-carrousel {
-    width: 70%;
+    width: 100%;
 }
 .portfolio_titulo{
     color: #FFFFFF;
@@ -191,10 +196,13 @@ strong {
     background-color: #000000;
     position: relative;
     justify-content: center;
-    margin:0% 0% 5% ;
-    padding: 8% 0% 5%;
+    margin:0% 0% 1% ;
+    padding: 8% 0% 1%;
 }
-
+.portfolio_descripcion {
+    padding-bottom: 3%;
+    margin: 10% 0;
+}
 
 .carrousel_container{
     width: 300%;
@@ -207,6 +215,7 @@ strong {
 .img_container{
     width: calc(100% / 3); /*Esto permite dividir el ancho entre las tres imagenes en partes iguales*/
     display: flex;
+    margin: 1% 0;
     justify-content: center;
     align-items: center;
 }
@@ -214,12 +223,12 @@ strong {
 .img_carrousel {
     max-width: 400px;
     border-radius: 10px;
-    /*box-shadow: 0 0 15px #eb400b, inset 0 0 15px #e95f35;  */
     box-shadow: 0 0 35px #2d0beb, inset 0 0 15px #3553e9;
 }
+
 .selectores_carrousel {
     width: 100%;
-    margin-top: 1.5% ;
+    margin: 2% 0 2%;
     list-style:none;
     display: flex;
     flex-flow: row nowrap;
@@ -232,44 +241,107 @@ strong {
     font-size: 10px;
     margin: 1% 5%;
     opacity: .8;
-
-    /*Este filtro permite dar sombreado a imagenes con transparencia*/
-    /*filter: drop-shadow(0 2px 5px #9f9aff); */
-}
-.selector_carrousel:hover {
-    transform: rotate(90deg);
-    transition-duration: 500ms;
 }
 .activo {
+    transform: scale(1.5);
     color: #2d0beb;
-    font-size: 25px;
+    transition-duration: 500ms;
 }
 /*Separador y Boton de contacto*/
+.video_mensaje_container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+#video-mensaje2 {
+    width: 100%;
+}
+.contacto_description {
+    margin: 10% 0 ;
+}
 .formulario_container {
     display: flex;
     flex-direction: column;
-    width: 90%;
-    margin: 5%;
+    width: 100%;
     justify-content: center;
     align-items: center;
 }
+.gif_container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.gif_contacto {
+    position: absolute;
+    width: 40%;
+    margin-top: 12%;
+}
+.gif_portfolio_container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.gif_portfolio {
+    position: absolute;
+    z-index: 100;
+    width: 70%;
+
+}
 .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
     color: #FFFFFF;
     font-size: 35px;
     background-color:#000000 ;
     padding: 1% 3%;
-    margin: 10% 0;  
-    animation: neon 800ms infinite linear;
-    border-radius: 2px;
+    margin: 7% 0;  
+    /*animation: neon 800ms infinite linear;
+    border-radius: 2px;*/
     transition: transform 500ms;
 }
+.button_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.button_ico {
+    color: #eb400b;
+    font-size: 80px;
+    animation: ico-mov 800ms infinite linear ;
+    z-index: 10;
+    filter: drop-shadow(0 0 20px rgba(255, 0, 0, 1));   
+}
+
+@keyframes ico-mov {
+    0% {
+        transform: translateY(-2%);
+    }
+    33% {
+        transform: translateY(0%);
+    }
+    66% { 
+        transform: translateY(2%);
+    }
+    99% { 
+        transform: translateY(0%);
+    }
+}
+
 .button:hover {
     transform:scale(1.2);
 }
 
-#video-mensaje {
-    width: 70%;
+.video_dinojuego_container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#video-dinojuego {
+    width: 100%;
 }
 
 /*iframe*/
@@ -282,14 +354,22 @@ h2 {
     color: #FFFFFF;
     text-align: center;
 }
+.dino_description_container {
+    margin: 10% 0 5% ;
+}
 .dino_description {
     padding: 5%;
+}
+.dino_game_description {
+    transform: scale(.8);
+    text-align: center;
+    margin: 0 auto;
 }
 .dino__container {
     display: flex;
     position: relative;
     justify-content: center;
-    margin: 2% 0;
+    margin: 10% 0;
     min-height: 300px;
 }
 .dino_iframe {  
@@ -314,9 +394,113 @@ h4 {
 }
 
 /***********************************************/
+/******************FORMULARIO******************/
+/*********************************************/
+form {
+    margin: 10% 1% 1%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+}
+.form_cont{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 1%;
+
+}
+label:nth-child(2) {
+    padding-top: 5%;
+}
+legend {
+    color: #FFFFFF;
+    padding: 1%;
+    font-size: 1.33rem;
+    margin:0 auto;
+    
+}
+label {
+    color: #FFFFFF;
+    padding: 1%;
+}
+
+.form_input {
+    position: relative;
+    width: 70%;
+    padding: 0 1%;
+}
+.form_textarea {
+    margin: 1% 1% 5%;
+    padding: 1% 1%;
+    height: 40vh;
+}
+.form_ico {
+    font-size: 60px;
+}
+.input_button {
+    border: none;
+}
+
+/*formulario validaciones*/
+fieldset {
+    display: flex;
+	align-items: center;
+	padding: 15px 0px 0px 0px;
+}
+
+.form_input--error {
+    background-color: #f69e9b;
+}
+.form_input--check {
+    background-color: #72e67f;
+}
+
+.name_error, .mail_error, .numero_error, .asunto_error, .mensaje_error {
+    font-size: 16px;
+    color: #c83900;
+    display: none;
+}
+.error--active {
+    display: flex;
+}
+.texto_ok {
+    text-align: center;
+}
+.formulario__mensaje--succes {
+    display: none;
+    position: absolute;
+    text-align: right;
+    top:50%;
+    left: 23vw;
+    width: 33vw;
+    padding: 10vw;
+    background-color: #000000;
+    border: solid #d7d7d7
+}
+
+.formulario__mensaje--succes--activo {
+    display: flex;
+}
+/***********************************************/
 /******************RESPONSIVE******************/
 /*********************************************/
-
+@media(max-width:1050px) {
+    * {
+        font-size: 20px;
+    }
+}
 @media(max-width:960px) {
     * {
         font-size: 18px;
@@ -336,8 +520,7 @@ h4 {
     top: 50%; 
     left: 50%;
     }
-    /*Insertar menu hamburguesa*/
-    
+    /* menu hamburguesa*/
     /*Boton open menu*/
     #btn-menu--open {
         display: flex;
@@ -354,14 +537,14 @@ h4 {
 		justify-content: center;
 		align-items: center ;
 		font-size: 24px;
-		background: #14182b;
+		background: #14182b55;
 		border-radius: 50px;
 		color: #d7d7d7;
 		cursor: pointer;
 		transition: all 300ms;
     }
     .fa-bars:hover {
-        background-color: #262f56;
+        background-color: #262f5699;
     }
     /*Boton Close menu y fondo degrade*/  
     #btn-menu {
@@ -376,14 +559,15 @@ h4 {
         font-size: 24px;
         width: 50px;
         height: 50px;
-        background: #14182b;
+        /*background: #14182b;*/
+        background: #000000;
         border-radius: 50px;
         color: #d7d7d7;
         cursor: pointer;
         transition: all 300ms;
     }
     #btn-menu:hover {
-        background-color: #262f56;
+        background-color: #262f5699;
     }
     /*Fondo degrade y vuelta al hacer click*/
     #back_menu {
@@ -437,9 +621,13 @@ h4 {
     }
     /*Sobre mi - separador*/
     .icon_container {
-        margin: 15%;
+        margin: 5%;
+    }
+    .description_div {
+        margin: 12% 0 8%;
     }
     .description {
+        padding: 13% 5% 3%;
         text-align: justify;
     }
     /*Portada carrousel*/
@@ -449,10 +637,35 @@ h4 {
     /*Carrousel*/
     .img_container {
         width: 100vw;
+        
     }
     .img_carrousel {
         max-width: 60%;    
     }
+    .form_cont .fa-solid::before {
+        top: -1vh;
+    }
+    /*Iconos de redes*/
+    .fa-brands {
+        font-size: 50px;
+    }  
+    /*contacto*/
+    .button_ico {
+
+        font-size: 50px;
+    }
+    /*formulario*/
+    i .button_ico {
+        font-size: 32px;
+    }
+}
+@media (max-height:540px) {
+    /*Al abrir el teclado en un celular el Vh se reduce a la mitad */
+    .form_cont .fa-solid::before {
+        top: -1.8vh;
+        left: 5vw;
+    }
+
 }
 @media (max-width:540px) {
     * {    
@@ -460,5 +673,8 @@ h4 {
     }
     .li_nav {
         margin-bottom: 15%;
-    }     
+    }
+   .button {
+       font-size: 24px;
+   }
 }
