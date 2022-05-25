@@ -158,7 +158,6 @@ strong {
     color: #d7d7d7;
 
     /*Este estilo de instagram lo saqué de internet, no es propio
-
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
     -webkit-background-clip: text;
           /* Also define standard property for compatibility 
@@ -284,7 +283,8 @@ strong {
 .gif_portfolio {
     position: absolute;
     z-index: 100;
-    width: 70%;
+    margin-top: 4%;
+    width: 75%;
 
 }
 .button {
@@ -297,23 +297,35 @@ strong {
     background-color:#000000 ;
     padding: 1% 3%;
     margin: 7% 0;  
-    /*animation: neon 800ms infinite linear;
-    border-radius: 2px;*/
     transition: transform 500ms;
 }
+
+ 
 .button_container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+.fa-envelope {
+    font-size: 100px;
+    color: #faebd7;
+    animation: ico-mov 800ms infinite linear ;
+    filter: drop-shadow(0 0 5px rgb(61, 61, 61));   
+ }
+.fa-hand-pointer {
+     color: #d7d7d7;
+     font-size: 30px;
+     margin-bottom: 10px;
+    }
+     
+     /*
 .button_ico {
     color: #eb400b;
     font-size: 80px;
     animation: ico-mov 800ms infinite linear ;
     z-index: 10;
-    filter: drop-shadow(0 0 20px rgba(255, 0, 0, 1));   
-}
+} */
 
 @keyframes ico-mov {
     0% {
@@ -388,14 +400,21 @@ footer {
     font-size: small;
     width: 100%;
 }
+.footer__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2%;
+}
 h4 {
     color: #FFFFFF;
-    margin: 10% 0;
+    margin: 5% 0;
 }
 
 /***********************************************/
 /******************FORMULARIO******************/
 /*********************************************/
+
 form {
     margin: 10% 1% 1%;
     width: 100%;
@@ -444,7 +463,7 @@ label {
 .form_textarea {
     margin: 1% 1% 5%;
     padding: 1% 1%;
-    height: 40vh;
+    height: 35vh;
 }
 .form_ico {
     font-size: 60px;
@@ -503,11 +522,12 @@ fieldset {
 }
 @media(max-width:960px) {
     * {
-        font-size: 18px;
+        font-size: 17px;
     }
 }
 
-@media (max-width:720px) {
+
+@media (max-width:723px) {
     
     #video {
         display: none;
@@ -649,16 +669,10 @@ fieldset {
     .fa-brands {
         font-size: 50px;
     }  
-    /*contacto*/
-    .button_ico {
-
-        font-size: 50px;
+    .fa-envelope {
+        font-size: 70px;
     }
-    /*formulario*/
-    i .button_ico {
-        font-size: 32px;
-    }
-}
+} 
 @media (max-height:540px) {
     /*Al abrir el teclado en un celular el Vh se reduce a la mitad */
     .form_cont .fa-solid::before {

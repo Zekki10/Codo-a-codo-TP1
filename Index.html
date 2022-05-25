@@ -5,23 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="loader.css">
     <!--Fuentes de Google-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/dec46bdae0.js" crossorigin="anonymous"></script>
-    
 
     <!--Esto es para el desarrollo, que no tome el cache luego debo borrarlo-->
     <meta http-equiv="Expires" content="0">
     <meta http-equiv="Last-Modified" content="0">
     <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
     <meta http-equiv="Pragma" content="no-cache">
-
+    <!--Loader-->
+    <script src="loader.js"></script>
 
     <title>TP Codo a codo 4.0 - Vera Ezequiel</title>
 </head>
 <body>
+    
+    <div id="Loader" class="loader_container">
+        <div class="lds-dual-ring"></div>
+    </div>
+ 
     <div id="back_menu" class="back_menu"></div>
     <!--Portada y barra de navegacion-->
     <header id="Inicio" class="container">
@@ -72,7 +78,7 @@
             La mayoria de estos tienen errores logicos de ser previos a algun tipo de estudio tutorizado y espero poder corregirlos luego con todo lo aprendido en esta etapa. <br><br>
             </p>
             <div class="carrousel_container">
-                <div class="img_container"><img class="img_carrousel" src="Recursos/Carrousel/img-carrousel1.png"></div>
+                <div class="img_container"><img class="img_carrousel" src="Recursos/Carrousel/img-carrousel1.png"></div></a>
                 <div class="img_container"><img class="img_carrousel" src="Recursos/Carrousel/img-carrousel2.png"></div>
                 <div class="img_container"><img class="img_carrousel" src="Recursos/Carrousel/img-carrousel3.png"></div>
             </div>
@@ -93,15 +99,18 @@
         </div>
         <p class="contacto_description">Sin embargo, si los encuentran de interes y por algun motivo, laboral o personal deciden comunicarse conmigo <i>"Guiño guiño"</i>, pueden realizarlo mediante el formulario de contacto en el link de aqui debajo:</p>
         <div class="button_container">
-            <i class="button_ico fa-solid fa-sort-down"></i>
-            <a class="button" href="Formulario.html" target="_blank">&lt;/Contacto&gt;</a>
+            <!-- <i class="button_ico fa-solid fa-sort-down"></i> -->
+            <a class="button" href="Formulario.html" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+            
+            <i class="fa-solid fa-hand-pointer"></i>
+            <p>Escribime un mensaje haciendo click aqui arriba!</p>
         </div>  
-        <p class="contacto_description">Pueden obtener más información mia en las siguientes redes de aquí debajo:</p>
+        <p class="contacto_description">Además, pueden obtener más información mia en las siguientes redes de aquí debajo:</p>
         <div class="icon_container">
             <a class="a_icon" href="https://www.linkedin.com/in/ezequielvera391/" target="_blank"href=""><i class="fa-brands fa-linkedin"></i></a>
-            <a class="a_icon" href="" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a class="a_icon" href="" target="_blank"><i class="fa-brands fa-instagram-square"></i></a>
-            <a class="a_icon" href="" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            <a class="a_icon" href="" target=""><i class="fa-brands fa-github"></i></a>
+            <a class="a_icon" href="" target=""><i class="fa-brands fa-instagram-square"></i></a>
+            <a class="a_icon" href="" target=""><i class="fa-brands fa-youtube"></i></a>
         </div>
     </section>  
     <!--iframe - Dinojuego-->
@@ -122,6 +131,7 @@
         <footer>
             <div class="footer__container">
                 <h4 class="footer_p">Ezequiel Vera - TP Codo a codo</h4>
+                <p>Arte y videos: <a href="https://www.instagram.com/_mienar/" target="_blank"><strong>_minear</strong></a></p>
             </div>
         </footer>
      

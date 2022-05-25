@@ -1,6 +1,3 @@
-'use strict'
-window.addEventListener("load", ()=>{
-
     'use strict'
 
     const contenedor    = document.querySelector('.carrousel_container')
@@ -35,10 +32,6 @@ window.addEventListener("load", ()=>{
     
         })
     })
-
-    // evento girar al hacer click //
-
-});
 
 
 
